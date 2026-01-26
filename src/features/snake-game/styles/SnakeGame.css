@@ -1,0 +1,130 @@
+.snake-game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: monospace;
+}
+
+.snake-game-header {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.snake-game-score {
+  color: #43d9ad;
+}
+
+.snake-game-status {
+  font-size: 12px;
+  color: #607b96;
+}
+
+.snake-game-canvas {
+  border: 1px solid rgba(67, 217, 173, 0.3);
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(67, 217, 173, 0.2), 0 0 40px rgba(77, 91, 206, 0.15);
+  background-color: rgba(15, 15, 30, 0.6);
+}
+
+.snake-game-controls {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #607b96;
+  text-align: center;
+}
+
+/* Mobile Controls */
+.snake-mobile-controls {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.snake-start-button {
+  padding: 12px 30px;
+  background-color: #43d9ad;
+  color: #010c15;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: 'Fira Code', monospace;
+  box-shadow: 0 4px 12px rgba(67, 217, 173, 0.3);
+}
+
+.snake-start-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 6px rgba(67, 217, 173, 0.3);
+}
+
+.snake-dpad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.snake-dpad-middle {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.snake-btn {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(67, 217, 173, 0.2);
+  border: 2px solid rgba(67, 217, 173, 0.5);
+  border-radius: 8px;
+  color: #43d9ad;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.snake-btn:active {
+  background-color: rgba(67, 217, 173, 0.4);
+  border-color: #43d9ad;
+  transform: scale(0.9);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .snake-game-header {
+    width: 280px;
+    font-size: 12px;
+  }
+
+  .snake-game-canvas {
+    width: 280px;
+    height: auto;
+  }
+
+  .snake-game-controls {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .snake-game-header {
+    width: 260px;
+    font-size: 11px;
+  }
+
+  .snake-game-canvas {
+    width: 260px;
+  }
+}
