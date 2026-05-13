@@ -29,7 +29,7 @@ const ProjectsSection = () => {
       demo: "https://roaming-karevan.vercel.app/",
     },
     {
-      id: 3,
+      id: 2,
       title: "Spotlight",
       description:
         "A mobile-first platform bridging physical and digital fashion — brands publish drops, buyers receive a digital twin of their purchase to tag, display, and share across their profile and posts. Built with React Native and Expo, featuring real-time sync, offline support, and a content feed architecture inspired by modern streaming platforms.",
