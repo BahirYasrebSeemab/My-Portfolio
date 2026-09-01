@@ -5,15 +5,16 @@
 
 .contact-sidebar {
   width: 250px;
-  background-color: rgba(1, 22, 39, 0.6);
-  backdrop-filter: blur(10px);
-  border-right: 1px solid rgba(67, 217, 173, 0.1);
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-right: 1px solid var(--glass-border);
   padding: 20px;
   overflow-y: auto;
 }
 
 .contact-sidebar-title {
-  color: #fff;
+  color: var(--nordic-white);
   margin-bottom: 20px;
   font-size: 14px;
 }
@@ -24,7 +25,7 @@
 
 .contact-folder-header {
   cursor: pointer;
-  color: #43d9ad;
+  color: var(--nordic-ice);
   margin-bottom: 8px;
   display: flex;
   align-items: center;
@@ -37,7 +38,7 @@
 
 .contact-folder-content {
   padding-left: 30px;
-  color: #607b96;
+  color: var(--nordic-muted);
   font-size: 14px;
 }
 
@@ -46,7 +47,7 @@
 }
 
 .contact-link {
-  color: #607b96;
+  color: var(--nordic-muted);
   text-decoration: none;
   display: block;
   padding: 5px 0;
@@ -54,7 +55,7 @@
 }
 
 .contact-link:hover {
-  color: #43d9ad;
+  color: var(--nordic-ice);
 }
 
 .contact-content {
@@ -67,15 +68,16 @@
 }
 
 .contact-form-container {
-  background-color: rgba(1, 22, 39, 0.6);
-  backdrop-filter: blur(10px);
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
   border-radius: 12px;
-  border: 1px solid rgba(67, 217, 173, 0.1);
+  border: 1px solid var(--glass-border);
   padding: 30px;
 }
 
 .contact-form-title {
-  color: #43d9ad;
+  color: var(--nordic-ice);
   margin-bottom: 20px;
   font-size: 20px;
 }
@@ -91,12 +93,12 @@
 }
 
 .contact-success-title {
-  color: #43d9ad;
+  color: var(--nordic-ice);
   margin-bottom: 10px;
 }
 
 .contact-success-message {
-  color: #607b96;
+  color: var(--nordic-muted);
 }
 
 .contact-form {
@@ -109,7 +111,7 @@
 }
 
 .contact-label {
-  color: #607b96;
+  color: var(--nordic-muted);
   display: block;
   margin-bottom: 8px;
   font-size: 14px;
@@ -119,10 +121,10 @@
 .contact-textarea {
   width: 100%;
   padding: 12px;
-  background-color: rgba(1, 22, 39, 0.8);
-  border: 1px solid rgba(67, 217, 173, 0.2);
+  background-color: var(--glass-bg-strong);
+  border: 1px solid rgba(142, 203, 239, 0.2);
   border-radius: 6px;
-  color: #fff;
+  color: var(--nordic-white);
   font-size: 14px;
   font-family: 'Fira Code', monospace;
 }
@@ -134,14 +136,14 @@
 .contact-input:focus,
 .contact-textarea:focus {
   outline: none;
-  border-color: rgba(67, 217, 173, 0.5);
+  border-color: rgba(142, 203, 239, 0.5);
 }
 
 .contact-submit {
   width: 100%;
   padding: 12px;
-  background-color: #43d9ad;
-  color: #010c15;
+  background-color: var(--nordic-ice);
+  color: var(--nordic-navy);
   border: none;
   border-radius: 6px;
   font-size: 14px;
@@ -151,24 +153,25 @@
 }
 
 .contact-submit:hover {
-  background-color: #3bc99d;
+  background-color: var(--nordic-ice-soft);
 }
 
 .contact-preview {
-  background-color: rgba(1, 22, 39, 0.6);
-  backdrop-filter: blur(10px);
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
   border-radius: 12px;
-  border: 1px solid rgba(67, 217, 173, 0.1);
+  border: 1px solid var(--glass-border);
   padding: 20px;
 }
 
 .contact-preview-tab {
-  color: #43d9ad;
+  color: var(--nordic-ice);
   margin-bottom: 15px;
 }
 
 .contact-preview-code {
-  color: #fff;
+  color: var(--nordic-white);
   font-size: 14px;
   line-height: 1.6;
 }
@@ -195,7 +198,7 @@
   .contact-sidebar {
     width: 100%;
     border-right: none;
-    border-bottom: 1px solid rgba(67, 217, 173, 0.1);
+    border-bottom: 1px solid var(--glass-border);
     max-height: 200px;
   }
 

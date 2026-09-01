@@ -5,15 +5,16 @@
 
 .about-sidebar {
   width: 250px;
-  background-color: rgba(1, 22, 39, 0.6);
-  backdrop-filter: blur(10px);
-  border-right: 1px solid rgba(67, 217, 173, 0.1);
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-right: 1px solid var(--glass-border);
   padding: 20px;
   overflow-y: auto;
 }
 
 .about-sidebar-title {
-  color: #fff;
+  color: var(--nordic-white);
   margin-bottom: 20px;
   font-size: 14px;
 }
@@ -24,7 +25,7 @@
 
 .about-folder-header {
   cursor: pointer;
-  color: #43d9ad;
+  color: var(--nordic-ice);
   margin-bottom: 8px;
   display: flex;
   align-items: center;
@@ -41,7 +42,7 @@
 
 .about-file {
   cursor: pointer;
-  color: #607b96;
+  color: var(--nordic-muted);
   padding: 5px 0;
   display: flex;
   align-items: center;
@@ -49,7 +50,7 @@
 }
 
 .about-file.active {
-  color: #43d9ad;
+  color: var(--nordic-ice);
 }
 
 .about-content {
@@ -62,20 +63,21 @@
 }
 
 .about-editor {
-  background-color: rgba(1, 22, 39, 0.6);
-  backdrop-filter: blur(10px);
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
   border-radius: 12px;
-  border: 1px solid rgba(67, 217, 173, 0.1);
+  border: 1px solid var(--glass-border);
   padding: 20px;
 }
 
 .about-editor-tab {
-  color: #43d9ad;
+  color: var(--nordic-ice);
   margin-bottom: 15px;
 }
 
 .about-editor-code {
-  color: #fff;
+  color: var(--nordic-white);
   font-size: 14px;
   line-height: 1.6;
   white-space: pre-wrap;
@@ -88,26 +90,27 @@
 }
 
 .about-snippets-title {
-  color: #607b96;
+  color: var(--nordic-muted);
   font-size: 14px;
 }
 
 .about-snippet {
-  background-color: rgba(1, 22, 39, 0.6);
-  backdrop-filter: blur(10px);
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
   border-radius: 12px;
-  border: 1px solid rgba(67, 217, 173, 0.1);
+  border: 1px solid var(--glass-border);
   padding: 15px;
 }
 
 .about-snippet-title {
-  color: #43d9ad;
+  color: var(--nordic-ice);
   margin-bottom: 10px;
   font-size: 14px;
 }
 
 .about-snippet-code {
-  color: #fff;
+  color: var(--nordic-white);
   font-size: 12px;
   line-height: 1.4;
   white-space: pre-wrap;
@@ -139,7 +142,7 @@
   .about-sidebar {
     width: 100%;
     border-right: none;
-    border-bottom: 1px solid rgba(67, 217, 173, 0.1);
+    border-bottom: 1px solid var(--glass-border);
     max-height: 200px;
   }
 

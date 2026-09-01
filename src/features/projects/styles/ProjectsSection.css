@@ -5,21 +5,22 @@
 
 .projects-sidebar {
   width: 250px;
-  background-color: rgba(1, 22, 39, 0.6);
-  backdrop-filter: blur(10px);
-  border-right: 1px solid rgba(67, 217, 173, 0.1);
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-right: 1px solid var(--glass-border);
   padding: 20px;
   overflow-y: auto;
 }
 
 .projects-sidebar-title {
-  color: #fff;
+  color: var(--nordic-white);
   margin-bottom: 20px;
   font-size: 14px;
 }
 
 .projects-folder-header {
-  color: #43d9ad;
+  color: var(--nordic-ice);
   margin-bottom: 15px;
   display: flex;
   align-items: center;
@@ -40,7 +41,7 @@
   gap: 8px;
   margin: 8px 0;
   cursor: pointer;
-  color: #607b96;
+  color: var(--nordic-muted);
 }
 
 .projects-content {
@@ -50,13 +51,13 @@
 }
 
 .projects-header {
-  color: #607b96;
+  color: var(--nordic-muted);
   margin-bottom: 10px;
   font-size: 16px;
 }
 
 .projects-description {
-  color: #607b96;
+  color: var(--nordic-muted);
   margin-bottom: 30px;
   font-size: 14px;
 }
@@ -68,10 +69,11 @@
 }
 
 .project-card {
-  background-color: rgba(1, 22, 39, 0.6);
-  backdrop-filter: blur(10px);
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
   border-radius: 12px;
-  border: 1px solid rgba(67, 217, 173, 0.1);
+  border: 1px solid var(--glass-border);
   padding: 20px;
   transition: transform 0.3s ease;
 }
@@ -87,13 +89,13 @@
 }
 
 .project-title {
-  color: #43d9ad;
+  color: var(--nordic-ice);
   margin-bottom: 10px;
   font-size: 18px;
 }
 
 .project-description {
-  color: #607b96;
+  color: var(--nordic-muted);
   margin-bottom: 15px;
   font-size: 14px;
   line-height: 1.6;
@@ -129,23 +131,23 @@
 
 .project-btn-secondary {
   background-color: transparent;
-  color: #4d5bce;
-  border: 1px solid #4d5bce;
+  color: var(--nordic-ice-soft);
+  border: 1px solid var(--nordic-ice-soft);
 }
 
 .project-btn-secondary:hover {
-  background-color: rgba(77, 91, 206, 0.1);
+  background-color: rgba(191, 227, 255, 0.1);
 }
 
 .project-btn-primary {
-  background-color: #43d9ad;
-  color: #010c15;
+  background-color: var(--nordic-ice);
+  color: var(--nordic-navy);
   border: none;
   font-weight: 500;
 }
 
 .project-btn-primary:hover {
-  background-color: #3bc99d;
+  background-color: var(--nordic-ice-soft);
 }
 
 /* Responsive */
@@ -172,7 +174,7 @@
   .projects-sidebar {
     width: 100%;
     border-right: none;
-    border-bottom: 1px solid rgba(67, 217, 173, 0.1);
+    border-bottom: 1px solid var(--glass-border);
     max-height: 200px;
   }
 

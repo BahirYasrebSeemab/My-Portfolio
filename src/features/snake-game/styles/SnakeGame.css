@@ -15,25 +15,25 @@
 }
 
 .snake-game-score {
-  color: #43d9ad;
+  color: var(--nordic-ice);
 }
 
 .snake-game-status {
   font-size: 12px;
-  color: #607b96;
+  color: var(--nordic-muted);
 }
 
 .snake-game-canvas {
-  border: 1px solid rgba(67, 217, 173, 0.3);
+  border: 1px solid rgba(142, 203, 239, 0.3);
   border-radius: 8px;
-  box-shadow: 0 0 20px rgba(67, 217, 173, 0.2), 0 0 40px rgba(77, 91, 206, 0.15);
-  background-color: rgba(15, 15, 30, 0.6);
+  box-shadow: 0 0 20px rgba(142, 203, 239, 0.2), 0 0 40px rgba(191, 227, 255, 0.15);
+  background-color: var(--glass-bg-strong);
 }
 
 .snake-game-controls {
   margin-top: 12px;
   font-size: 12px;
-  color: #607b96;
+  color: var(--nordic-muted);
   text-align: center;
 }
 
@@ -48,8 +48,8 @@
 
 .snake-start-button {
   padding: 12px 30px;
-  background-color: #43d9ad;
-  color: #010c15;
+  background-color: var(--nordic-ice);
+  color: var(--nordic-navy);
   border: none;
   border-radius: 8px;
   font-size: 16px;
@@ -57,12 +57,12 @@
   cursor: pointer;
   transition: all 0.3s;
   font-family: 'Fira Code', monospace;
-  box-shadow: 0 4px 12px rgba(67, 217, 173, 0.3);
+  box-shadow: 0 4px 12px rgba(142, 203, 239, 0.3);
 }
 
 .snake-start-button:active {
   transform: scale(0.95);
-  box-shadow: 0 2px 6px rgba(67, 217, 173, 0.3);
+  box-shadow: 0 2px 6px rgba(142, 203, 239, 0.3);
 }
 
 .snake-dpad {
@@ -81,10 +81,10 @@
 .snake-btn {
   width: 50px;
   height: 50px;
-  background-color: rgba(67, 217, 173, 0.2);
-  border: 2px solid rgba(67, 217, 173, 0.5);
+  background-color: rgba(142, 203, 239, 0.2);
+  border: 2px solid rgba(142, 203, 239, 0.5);
   border-radius: 8px;
-  color: #43d9ad;
+  color: var(--nordic-ice);
   font-size: 24px;
   cursor: pointer;
   transition: all 0.2s;
@@ -96,8 +96,8 @@
 }
 
 .snake-btn:active {
-  background-color: rgba(67, 217, 173, 0.4);
-  border-color: #43d9ad;
+  background-color: rgba(142, 203, 239, 0.4);
+  border-color: var(--nordic-ice);
   transform: scale(0.9);
 }
 

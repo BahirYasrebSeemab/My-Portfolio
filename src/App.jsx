@@ -6,6 +6,7 @@ import HelloSection from "./features/hello/HelloSection";
 import AboutSection from "./features/about/AboutSection";
 import ProjectsSection from "./features/projects/ProjectsSection";
 import ContactSection from "./features/contact/ContactSection";
+import TerminalSection from "./features/terminal/TerminalSection";
 
 function App() {
   const [activeSection, setActiveSection] = useState("hello");
@@ -18,6 +19,7 @@ function App() {
       {activeSection === "hello" && <HelloSection />}
       {activeSection === "about-me" && <AboutSection />}
       {activeSection === "projects" && <ProjectsSection />}
+      {activeSection === "terminal" && <TerminalSection setActiveSection={setActiveSection} />}
       {activeSection === "contact-me" && <ContactSection />}
     </div>
   );

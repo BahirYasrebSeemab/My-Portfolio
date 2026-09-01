@@ -16,7 +16,7 @@
 }
 
 .hello-text {
-  color: #fff;
+  color: var(--nordic-white);
 }
 
 .hello-title {
@@ -27,20 +27,20 @@
 }
 
 .hello-name {
-  color: #43d9ad;
-  text-shadow: 0 0 20px rgba(67, 217, 173, 0.4);
+  color: var(--nordic-ice);
+  text-shadow: 0 0 20px rgba(142, 203, 239, 0.4);
 }
 
 .hello-role {
   font-size: 32px;
-  color: #4d5bce;
+  color: var(--nordic-ice-soft);
   margin-bottom: 40px;
   font-weight: 300;
 }
 
 .hello-info {
   font-size: 16px;
-  color: #607b96;
+  color: var(--nordic-muted);
   line-height: 1.8;
 }
 
@@ -49,25 +49,25 @@
 }
 
 .hello-const {
-  color: #4d5bce;
+  color: var(--nordic-ice-soft);
 }
 
 .hello-var {
-  color: #43d9ad;
+  color: var(--nordic-ice);
 }
 
 .hello-equals {
-  color: #fff;
+  color: var(--nordic-white);
 }
 
 .hello-link {
-  color: #e99287;
+  color: var(--nordic-ice-soft);
   text-decoration: none;
-  border-bottom: 1px solid rgba(233, 146, 135, 0.3);
+  border-bottom: 1px solid rgba(191, 227, 255, 0.3);
 }
 
 .hello-link:hover {
-  border-bottom-color: #e99287;
+  border-bottom-color: var(--nordic-ice-soft);
 }
 
 .hello-game {
@@ -75,10 +75,11 @@
   justify-content: center;
   align-items: center;
   padding: 30px;
-  background: rgba(1, 22, 39, 0.4);
+  background: var(--glass-bg);
   border-radius: 12px;
-  border: 1px solid rgba(67, 217, 173, 0.1);
-  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 

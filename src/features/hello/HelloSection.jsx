@@ -10,7 +10,7 @@ const HelloSection = () => (
           Hi all. I'm{" "}
           <span className="hello-name">Bahir Yasreb Seemab</span>
         </h1>
-        <h2 className="hello-role">&gt; Front-end developer</h2>
+        <h2 className="hello-role">&gt; Cross-platform Full-stack developer</h2>
         <div className="hello-info">
           <p>// Complete the game to continue</p>
           <p>// Find my profile on Github:</p>

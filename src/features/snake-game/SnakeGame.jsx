@@ -42,14 +42,14 @@ const SnakeGame = () => {
 
     const ctx = canvas.getContext("2d");
 
-    ctx.fillStyle = "rgba(15, 15, 30, 0.95)";
+    ctx.fillStyle = "rgba(10, 22, 40, 0.95)";
     ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
     snakeRef.current.forEach((segment, index) => {
       if (index === 0) {
-        ctx.fillStyle = "#43d9ad";
+        ctx.fillStyle = "#8ecbef";
       } else {
-        ctx.fillStyle = "#4d5bce";
+        ctx.fillStyle = "#4a6fa5";
       }
       ctx.fillRect(
         segment.x * GRID_SIZE,
@@ -59,7 +59,7 @@ const SnakeGame = () => {
       );
     });
 
-    ctx.fillStyle = "#e99287";
+    ctx.fillStyle = "#f2f8ff";
     ctx.fillRect(
       foodRef.current.x * GRID_SIZE,
       foodRef.current.y * GRID_SIZE,

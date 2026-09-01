@@ -20,7 +20,7 @@ const AboutSection = () => {
 
 const bio = {
   name: "Bahir Yasreb Seemab",
-  role: "Front-end Developer",
+  role: "Cross-platform Full-stack Developer",
   location: "Dushanbe, Tajikistan",
   experience: "5+ years",
   languages: ["JavaScript", "TypeScript", "Python"],

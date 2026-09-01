@@ -2,9 +2,10 @@
   position: relative;
   z-index: 10;
   height: 50px;
-  background-color: rgba(1, 22, 39, 0.8);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(67, 217, 173, 0.1);
+  background-color: var(--glass-bg-strong);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-bottom: 1px solid var(--glass-border);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,25 +18,25 @@
 }
 
 .top-bar-logo {
-  color: #43d9ad;
+  color: var(--nordic-ice);
   padding: 15px 25px;
 }
 
 .top-bar-tab {
   padding: 15px 25px;
   cursor: pointer;
-  color: #607b96;
+  color: var(--nordic-muted);
   border-bottom: 2px solid transparent;
   transition: all 0.3s ease;
 }
 
 .top-bar-tab.active {
-  color: #43d9ad;
-  border-bottom: 2px solid #43d9ad;
+  color: var(--nordic-ice);
+  border-bottom: 2px solid var(--nordic-ice);
 }
 
 .top-bar-tab:hover {
-  color: #43d9ad;
+  color: var(--nordic-ice);
 }
 
 .top-bar-contact {
