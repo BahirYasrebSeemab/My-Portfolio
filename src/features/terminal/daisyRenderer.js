@@ -10,20 +10,31 @@
 // actually draws the flower.
 
 const PETAL_COUNT = 12;
-const PETAL_LENGTH = 2.2;
-const PETAL_MAX_WIDTH = 0.55;
-const PETAL_BOWL = 0.35;
+const PETAL_LENGTH = 1.7;
+const PETAL_MAX_WIDTH = 0.45;
+const PETAL_BOWL = 0.3;
 const PETAL_TILT = 0.35;
-const CENTER_RADIUS = 0.55;
-const CENTER_DOME = 0.35;
+const CENTER_RADIUS = 0.45;
+const CENTER_DOME = 0.3;
 
-const CAMERA_TILT = 1.05;
+const STEM_LENGTH = 2.6;
+const STEM_RADIUS = 0.08;
+const STEM_BEND = 0.25;
+const LEAF_LENGTH = 0.75;
+const LEAF_MAX_WIDTH = 0.32;
+const LEAF_STEM_U = 0.45;
+const LEAF_SIDE = 1;
+
+// A little tilt off pure side-on, looking down onto the flower face rather
+// than nearly edge-on.
+const CAMERA_TILT = 0.85;
 const WOBBLE_AMPLITUDE = 0.12;
 const WOBBLE_SPEED = 0.6;
 const SPIN_SPEED = 0.6;
 
-const CAMERA_DISTANCE = 3.2;
-const PROJECTION_SCALE = 1.7;
+const CAMERA_DISTANCE = 3.6;
+const PROJECTION_SCALE = 1.35;
+const VERTICAL_ANCHOR = 0.34;
 
 const LUMINANCE_CHARS = ".,:;+*#%@";
 
@@ -94,6 +105,32 @@ function petalPoint(index, u, v) {
   };
 }
 
+// The stem: a thin, gently bent tube hanging below the flower head. Larger
+// z renders lower on screen in this projection, so the stem needs the
+// opposite sign from the head's small positive-z bulge to hang below it.
+function stemPoint(u, v) {
+  const angle = v * Math.PI * 2;
+  const bendOffset = STEM_BEND * Math.sin(u * Math.PI * 0.5);
+  return {
+    x: bendOffset + STEM_RADIUS * Math.cos(angle),
+    y: STEM_RADIUS * Math.sin(angle),
+    z: u * STEM_LENGTH,
+    part: "stem",
+  };
+}
+
+// A single small leaf branching off the stem partway down.
+function leafPoint(u, v) {
+  const attach = stemPoint(LEAF_STEM_U, 0);
+  const width = LEAF_MAX_WIDTH * Math.sin(Math.PI * u);
+  return {
+    x: attach.x + u * LEAF_LENGTH * LEAF_SIDE,
+    y: attach.y + v * width * 0.5,
+    z: attach.z + 0.1 - 0.12 * v * v,
+    part: "leaf",
+  };
+}
+
 // Approximate surface normal from nearby samples, works for any patch
 // function regardless of its shape.
 function surfaceNormal(pointAt, u, v) {
@@ -124,7 +161,7 @@ export function renderDaisyFrame({ cols, rows, time }) {
     const invZ = 1 / z;
 
     const screenX = Math.round(cols / 2 + PROJECTION_SCALE * cols * 0.5 * sp.x * invZ);
-    const screenY = Math.round(rows / 2 - PROJECTION_SCALE * rows * 0.6 * sp.y * invZ);
+    const screenY = Math.round(rows * VERTICAL_ANCHOR - PROJECTION_SCALE * rows * 0.6 * sp.y * invZ);
     if (screenX < 0 || screenX >= cols || screenY < 0 || screenY >= rows) return;
 
     const index = screenY * cols + screenX;
@@ -151,6 +188,18 @@ export function renderDaisyFrame({ cols, rows, time }) {
       for (let v = -1; v <= 1; v += 0.12) {
         plot(pointAt(u, v), surfaceNormal(pointAt, u, v));
       }
+    }
+  }
+
+  for (let u = 0; u <= 1; u += 0.04) {
+    for (let v = 0; v < 1; v += 0.15) {
+      plot(stemPoint(u, v), surfaceNormal(stemPoint, u, v));
+    }
+  }
+
+  for (let u = 0; u <= 1; u += 0.08) {
+    for (let v = -1; v <= 1; v += 0.2) {
+      plot(leafPoint(u, v), surfaceNormal(leafPoint, u, v));
     }
   }
 

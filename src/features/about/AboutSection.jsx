@@ -65,49 +65,42 @@ export { interests, currentlyLearning };`,
 
   const codeSnippets = [
     {
-      title: "Snake Movement Logic",
-      code: `const updateGame = () => {
-  const head = { 
-    x: snake[0].x + direction.x, 
-    y: snake[0].y + direction.y 
+      title: "Petal Placement (terminal flower)",
+      code: `function petalPoint(index, u, v) {
+  const width = PETAL_MAX_WIDTH * Math.sin(Math.PI * u);
+  let x = CENTER_RADIUS + u * PETAL_LENGTH;
+  const y = v * width * 0.5;
+  let z = -PETAL_BOWL * v * v + 0.15 * Math.sin(Math.PI * u);
+
+  const tiltedX = x * Math.cos(PETAL_TILT) + z * Math.sin(PETAL_TILT);
+  const tiltedZ = -x * Math.sin(PETAL_TILT) + z * Math.cos(PETAL_TILT);
+  x = tiltedX;
+  z = tiltedZ;
+
+  const angle = (index / PETAL_COUNT) * Math.PI * 2;
+  return {
+    x: x * Math.cos(angle) - y * Math.sin(angle),
+    y: x * Math.sin(angle) + y * Math.cos(angle),
+    z,
+    part: "petal",
   };
-  
-  if (checkCollision(head)) {
-    setGameState('gameOver');
-    return;
-  }
-  
-  const newSnake = [head, ...snake];
-  
-  if (head.x === food.x && head.y === food.y) {
-    setScore(prev => prev + 10);
-    food = generateFood();
-  } else {
-    newSnake.pop();
-  }
-  
-  snake = newSnake;
-};`,
+}`,
     },
     {
-      title: "Collision Detection",
-      code: `const checkCollision = (head) => {
-  // Wall collision
-  if (head.x < 0 || head.x >= width || 
-      head.y < 0 || head.y >= height) {
-    return true;
-  }
-  
-  // Self collision
-  for (let i = 1; i < snake.length; i++) {
-    if (snake[i].x === head.x && 
-        snake[i].y === head.y) {
-      return true;
-    }
-  }
-  
-  return false;
-};`,
+      title: "Spin & Perspective Projection",
+      code: `const z = CAMERA_DISTANCE + sp.z;
+if (z <= 0.1) return;
+const invZ = 1 / z;
+
+const screenX = Math.round(
+  cols / 2 + PROJECTION_SCALE * cols * 0.5 * sp.x * invZ
+);
+const screenY = Math.round(
+  rows * VERTICAL_ANCHOR - PROJECTION_SCALE * rows * 0.6 * sp.y * invZ
+);
+
+const index = screenY * cols + screenX;
+if (invZ <= depth[index]) return;`,
     },
   ];
 

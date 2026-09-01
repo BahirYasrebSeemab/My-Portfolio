@@ -64,7 +64,15 @@
 }
 
 .daisy-center {
-  color: var(--nordic-ice);
+  color: var(--nordic-sky);
+}
+
+.daisy-leaf {
+  color: var(--nordic-sky-soft);
+}
+
+.daisy-stem {
+  color: var(--nordic-muted);
 }
 
 .terminal-shell {
@@ -89,7 +97,7 @@
 }
 
 .terminal-line-input {
-  color: var(--nordic-ice-soft);
+  color: var(--nordic-sky-soft);
 }
 
 .terminal-line-output {
@@ -105,11 +113,11 @@
 }
 
 .code-token-keyword {
-  color: var(--nordic-ice);
+  color: var(--nordic-sky);
 }
 
 .code-token-string {
-  color: var(--nordic-ice-soft);
+  color: var(--nordic-sky-soft);
 }
 
 .code-token-comment {
@@ -129,7 +137,7 @@
 }
 
 .terminal-prompt {
-  color: var(--nordic-ice);
+  color: var(--nordic-sky);
   white-space: nowrap;
 }
 

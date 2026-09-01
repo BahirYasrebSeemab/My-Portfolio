@@ -32,14 +32,14 @@ const AsciiDaisy = () => {
     let raf;
     let lastFrame = 0;
     const startTime = performance.now();
-    let cols = 56;
-    let rows = 26;
+    let cols = 58;
+    let rows = 34;
 
     const measure = () => {
       const width = containerRef.current?.clientWidth || 400;
       const isSmall = width < 420;
-      cols = isSmall ? 40 : 56;
-      rows = isSmall ? 20 : 26;
+      cols = isSmall ? 42 : 58;
+      rows = isSmall ? 26 : 34;
     };
     measure();
     window.addEventListener("resize", measure);

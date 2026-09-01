@@ -18,7 +18,7 @@
 }
 
 .top-bar-logo {
-  color: var(--nordic-ice);
+  color: var(--nordic-sky);
   padding: 15px 25px;
 }
 
@@ -31,12 +31,12 @@
 }
 
 .top-bar-tab.active {
-  color: var(--nordic-ice);
-  border-bottom: 2px solid var(--nordic-ice);
+  color: var(--nordic-sky);
+  border-bottom: 2px solid var(--nordic-sky);
 }
 
 .top-bar-tab:hover {
-  color: var(--nordic-ice);
+  color: var(--nordic-sky);
 }
 
 .top-bar-contact {

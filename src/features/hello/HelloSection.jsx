@@ -1,5 +1,5 @@
 import React from "react";
-import SnakeGame from "../snake-game/SnakeGame";
+import ChessGame from "../chess/ChessGame";
 import "./styles/HelloSection.css";
 
 const HelloSection = () => (
@@ -12,7 +12,7 @@ const HelloSection = () => (
         </h1>
         <h2 className="hello-role">&gt; Cross-platform Full-stack developer</h2>
         <div className="hello-info">
-          <p>// Complete the game to continue</p>
+          <p>// Beat me at chess if you're curious</p>
           <p>// Find my profile on Github:</p>
           <p>
             <span className="hello-const">const</span>{" "}
@@ -30,7 +30,7 @@ const HelloSection = () => (
         </div>
       </div>
       <div className="hello-game">
-        <SnakeGame />
+        <ChessGame />
       </div>
     </div>
   </div>

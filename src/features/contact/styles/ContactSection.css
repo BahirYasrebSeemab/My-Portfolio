@@ -25,7 +25,7 @@
 
 .contact-folder-header {
   cursor: pointer;
-  color: var(--nordic-ice);
+  color: var(--nordic-sky);
   margin-bottom: 8px;
   display: flex;
   align-items: center;
@@ -55,7 +55,7 @@
 }
 
 .contact-link:hover {
-  color: var(--nordic-ice);
+  color: var(--nordic-sky);
 }
 
 .contact-content {
@@ -77,7 +77,7 @@
 }
 
 .contact-form-title {
-  color: var(--nordic-ice);
+  color: var(--nordic-sky);
   margin-bottom: 20px;
   font-size: 20px;
 }
@@ -93,7 +93,7 @@
 }
 
 .contact-success-title {
-  color: var(--nordic-ice);
+  color: var(--nordic-sky);
   margin-bottom: 10px;
 }
 
@@ -122,7 +122,7 @@
   width: 100%;
   padding: 12px;
   background-color: var(--glass-bg-strong);
-  border: 1px solid rgba(142, 203, 239, 0.2);
+  border: 1px solid rgba(79, 179, 232, 0.2);
   border-radius: 6px;
   color: var(--nordic-white);
   font-size: 14px;
@@ -136,13 +136,13 @@
 .contact-input:focus,
 .contact-textarea:focus {
   outline: none;
-  border-color: rgba(142, 203, 239, 0.5);
+  border-color: rgba(79, 179, 232, 0.5);
 }
 
 .contact-submit {
   width: 100%;
   padding: 12px;
-  background-color: var(--nordic-ice);
+  background-color: var(--nordic-sky);
   color: var(--nordic-navy);
   border: none;
   border-radius: 6px;
@@ -153,7 +153,7 @@
 }
 
 .contact-submit:hover {
-  background-color: var(--nordic-ice-soft);
+  background-color: var(--nordic-sky-soft);
 }
 
 .contact-preview {
@@ -166,7 +166,7 @@
 }
 
 .contact-preview-tab {
-  color: var(--nordic-ice);
+  color: var(--nordic-sky);
   margin-bottom: 15px;
 }
 

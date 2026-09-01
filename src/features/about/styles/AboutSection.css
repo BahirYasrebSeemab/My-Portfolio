@@ -25,7 +25,7 @@
 
 .about-folder-header {
   cursor: pointer;
-  color: var(--nordic-ice);
+  color: var(--nordic-sky);
   margin-bottom: 8px;
   display: flex;
   align-items: center;
@@ -50,7 +50,7 @@
 }
 
 .about-file.active {
-  color: var(--nordic-ice);
+  color: var(--nordic-sky);
 }
 
 .about-content {
@@ -72,7 +72,7 @@
 }
 
 .about-editor-tab {
-  color: var(--nordic-ice);
+  color: var(--nordic-sky);
   margin-bottom: 15px;
 }
 
@@ -104,7 +104,7 @@
 }
 
 .about-snippet-title {
-  color: var(--nordic-ice);
+  color: var(--nordic-sky);
   margin-bottom: 10px;
   font-size: 14px;
 }

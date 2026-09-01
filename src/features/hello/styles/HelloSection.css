@@ -27,13 +27,13 @@
 }
 
 .hello-name {
-  color: var(--nordic-ice);
-  text-shadow: 0 0 20px rgba(142, 203, 239, 0.4);
+  color: var(--nordic-sky);
+  text-shadow: 0 0 20px rgba(79, 179, 232, 0.4);
 }
 
 .hello-role {
   font-size: 32px;
-  color: var(--nordic-ice-soft);
+  color: var(--nordic-sky-soft);
   margin-bottom: 40px;
   font-weight: 300;
 }
@@ -49,11 +49,11 @@
 }
 
 .hello-const {
-  color: var(--nordic-ice-soft);
+  color: var(--nordic-sky-soft);
 }
 
 .hello-var {
-  color: var(--nordic-ice);
+  color: var(--nordic-sky);
 }
 
 .hello-equals {
@@ -61,13 +61,13 @@
 }
 
 .hello-link {
-  color: var(--nordic-ice-soft);
+  color: var(--nordic-sky-soft);
   text-decoration: none;
-  border-bottom: 1px solid rgba(191, 227, 255, 0.3);
+  border-bottom: 1px solid rgba(142, 212, 245, 0.3);
 }
 
 .hello-link:hover {
-  border-bottom-color: var(--nordic-ice-soft);
+  border-bottom-color: var(--nordic-sky-soft);
 }
 
 .hello-game {

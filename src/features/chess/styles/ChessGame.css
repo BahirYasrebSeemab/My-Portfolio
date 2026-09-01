@@ -1,0 +1,186 @@
+/* Idle preview card — sits inside HelloSection's .hello-game glass panel */
+.chess-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  font-family: "Fira Code", monospace;
+}
+
+.chess-preview-board {
+  width: 240px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 0 20px rgba(79, 179, 232, 0.15);
+  pointer-events: none;
+}
+
+.chess-preview-text {
+  max-width: 240px;
+  text-align: center;
+  color: var(--nordic-muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.chess-play-button {
+  padding: 10px 28px;
+  background-color: var(--nordic-sky);
+  color: var(--nordic-navy);
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: "Fira Code", monospace;
+}
+
+.chess-play-button:hover {
+  background-color: var(--nordic-sky-soft);
+}
+
+/* Fullscreen game overlay */
+.chess-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  background: var(--nordic-navy);
+  background: linear-gradient(rgba(10, 22, 40, 0.92), rgba(10, 22, 40, 0.96)),
+    var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  font-family: "Fira Code", monospace;
+}
+
+.chess-fullscreen-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.chess-fullscreen-title {
+  color: var(--nordic-muted);
+  font-size: 13px;
+}
+
+.chess-close-button {
+  background: transparent;
+  border: 1px solid var(--glass-border);
+  color: var(--nordic-muted);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: "Fira Code", monospace;
+  transition: all 0.2s;
+}
+
+.chess-close-button:hover {
+  color: var(--nordic-white);
+  border-color: var(--nordic-sky-soft);
+}
+
+.chess-fullscreen-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.chess-board-wrap {
+  width: min(80vw, 520px);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+}
+
+.chess-status-text {
+  color: var(--nordic-sky-soft);
+  font-size: 14px;
+}
+
+.chess-resign-button {
+  background: transparent;
+  border: 1px solid rgba(232, 169, 169, 0.4);
+  color: #e8a9a9;
+  border-radius: 6px;
+  padding: 8px 20px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: "Fira Code", monospace;
+  transition: all 0.2s;
+}
+
+.chess-resign-button:hover {
+  background: rgba(232, 169, 169, 0.1);
+}
+
+.chess-result-panel {
+  max-width: 420px;
+  text-align: center;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.chess-result-title {
+  color: var(--nordic-white);
+  font-size: 20px;
+  margin-bottom: 12px;
+  text-transform: lowercase;
+}
+
+.chess-result-win {
+  color: var(--nordic-sky);
+}
+
+.chess-result-message {
+  color: var(--nordic-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.chess-username {
+  color: var(--nordic-sky);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.chess-result-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .chess-preview-board {
+    width: 200px;
+  }
+
+  .chess-board-wrap {
+    width: min(92vw, 420px);
+  }
+}
+
+@media (max-width: 480px) {
+  .chess-fullscreen-title {
+    display: none;
+  }
+
+  .chess-result-panel {
+    padding: 20px;
+  }
+}

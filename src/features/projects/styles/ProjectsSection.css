@@ -20,7 +20,7 @@
 }
 
 .projects-folder-header {
-  color: var(--nordic-ice);
+  color: var(--nordic-sky);
   margin-bottom: 15px;
   display: flex;
   align-items: center;
@@ -89,7 +89,7 @@
 }
 
 .project-title {
-  color: var(--nordic-ice);
+  color: var(--nordic-sky);
   margin-bottom: 10px;
   font-size: 18px;
 }
@@ -131,23 +131,23 @@
 
 .project-btn-secondary {
   background-color: transparent;
-  color: var(--nordic-ice-soft);
-  border: 1px solid var(--nordic-ice-soft);
+  color: var(--nordic-sky-soft);
+  border: 1px solid var(--nordic-sky-soft);
 }
 
 .project-btn-secondary:hover {
-  background-color: rgba(191, 227, 255, 0.1);
+  background-color: rgba(142, 212, 245, 0.1);
 }
 
 .project-btn-primary {
-  background-color: var(--nordic-ice);
+  background-color: var(--nordic-sky);
   color: var(--nordic-navy);
   border: none;
   font-weight: 500;
 }
 
 .project-btn-primary:hover {
-  background-color: var(--nordic-ice-soft);
+  background-color: var(--nordic-sky-soft);
 }
 
 /* Responsive */

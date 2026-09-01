@@ -5,6 +5,7 @@ import TopBar from "./shared/components/TopBar";
 import HelloSection from "./features/hello/HelloSection";
 import AboutSection from "./features/about/AboutSection";
 import ProjectsSection from "./features/projects/ProjectsSection";
+import HobbiesSection from "./features/hobbies/HobbiesSection";
 import ContactSection from "./features/contact/ContactSection";
 import TerminalSection from "./features/terminal/TerminalSection";
 
@@ -19,6 +20,7 @@ function App() {
       {activeSection === "hello" && <HelloSection />}
       {activeSection === "about-me" && <AboutSection />}
       {activeSection === "projects" && <ProjectsSection />}
+      {activeSection === "hobbies" && <HobbiesSection />}
       {activeSection === "terminal" && <TerminalSection setActiveSection={setActiveSection} />}
       {activeSection === "contact-me" && <ContactSection />}
     </div>
