@@ -1,4 +1,30 @@
+@font-face {
+  font-family: "JetBrainsMono Nerd Font Mono";
+  src: url("/fonts/JetBrainsMonoNerdFontMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrainsMono Nerd Font Mono";
+  src: url("/fonts/JetBrainsMonoNerdFontMono-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrainsMono Nerd Font Mono";
+  src: url("/fonts/JetBrainsMonoNerdFontMono-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
+  --font-mono: "JetBrainsMono Nerd Font Mono", ui-monospace, "Cascadia Code", monospace;
+
   --nordic-navy: #0a1628;
   --nordic-navy-soft: #12203a;
   --nordic-sky: #4fb3e8;
@@ -23,7 +49,7 @@
   background-color: var(--nordic-navy);
   position: relative;
   overflow: hidden;
-  font-family: 'Fira Code', monospace;
+  font-family: var(--font-mono);
 }
 
 .app-container::before {
@@ -50,9 +76,6 @@
   -webkit-backdrop-filter: blur(var(--glass-blur));
   border: 1px solid var(--glass-border);
 }
-
-/* Import Fira Code font */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
 
 /* Global scrollbar styling */
 ::-webkit-scrollbar {

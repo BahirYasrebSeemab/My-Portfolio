@@ -20,7 +20,7 @@ const AboutSection = () => {
 
 const bio = {
   name: "Bahir Yasreb Seemab",
-  role: "Cross-platform Full-stack Developer",
+  role: "Full-stack Engineer",
   location: "Dushanbe, Tajikistan",
   experience: "5+ years",
   languages: ["JavaScript", "TypeScript", "Python"],
@@ -55,7 +55,7 @@ export { interests, currentlyLearning };`,
     email: `const contactInfo = {
   email: "bahiryasreb@gmail.com",
   linkedin: "linkedin.com/in/johndoe",
-  github: "github.com/bahir22447"
+  github: "github.com/BahirYasrebSeemab"
 };`,
     phone: `const phoneNumber = "+992 930 550 664";
 

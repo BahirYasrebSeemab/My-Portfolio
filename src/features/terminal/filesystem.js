@@ -69,11 +69,6 @@ export const filesystem = {
       navigateTo: "projects",
       children: buildProjectsChildren(),
     },
-    hobbies: {
-      type: "dir",
-      navigateTo: "hobbies",
-      children: {},
-    },
     "contact-me": {
       type: "dir",
       navigateTo: "contact-me",

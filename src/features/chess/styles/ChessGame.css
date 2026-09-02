@@ -4,15 +4,16 @@
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  font-family: "Fira Code", monospace;
+  font-family: var(--font-mono);
 }
 
 .chess-preview-board {
   width: 240px;
+  aspect-ratio: 1 / 1;
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--glass-border);
-  box-shadow: 0 0 20px rgba(79, 179, 232, 0.15);
+  box-shadow: 0 0 24px rgba(79, 179, 232, 0.2);
   pointer-events: none;
 }
 
@@ -35,7 +36,7 @@
   letter-spacing: 0.05em;
   cursor: pointer;
   transition: all 0.2s;
-  font-family: "Fira Code", monospace;
+  font-family: var(--font-mono);
 }
 
 .chess-play-button:hover {
@@ -54,7 +55,7 @@
     var(--glass-bg);
   backdrop-filter: blur(var(--glass-blur));
   -webkit-backdrop-filter: blur(var(--glass-blur));
-  font-family: "Fira Code", monospace;
+  font-family: var(--font-mono);
 }
 
 .chess-fullscreen-header {
@@ -78,7 +79,7 @@
   padding: 6px 12px;
   font-size: 12px;
   cursor: pointer;
-  font-family: "Fira Code", monospace;
+  font-family: var(--font-mono);
   transition: all 0.2s;
 }
 
@@ -100,6 +101,7 @@
 
 .chess-board-wrap {
   width: min(80vw, 520px);
+  aspect-ratio: 1 / 1;
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid var(--glass-border);
@@ -119,7 +121,7 @@
   padding: 8px 20px;
   font-size: 13px;
   cursor: pointer;
-  font-family: "Fira Code", monospace;
+  font-family: var(--font-mono);
   transition: all 0.2s;
 }
 

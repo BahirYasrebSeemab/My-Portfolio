@@ -6,13 +6,15 @@ import { useStockfish } from "./useStockfish";
 import "./styles/ChessGame.css";
 
 const STORAGE_KEY = "chess-game-fen";
-// TODO: replace with your real chess.com handle before shipping.
-const CHESS_COM_USERNAME = "your-username-here";
+const CHESS_COM_USERNAME = "Y4sreb";
 
 const START_FEN = new Chess().fen();
 
-const DARK_SQUARE_STYLE = { backgroundColor: "#12203a" };
-const LIGHT_SQUARE_STYLE = { backgroundColor: "#1c3252" };
+// Deliberately higher-contrast than a literal two-tone navy pairing would
+// give — a checkerboard needs clear value separation to read at a glance,
+// especially at the preview card's small size.
+const DARK_SQUARE_STYLE = { backgroundColor: "#0c1729" };
+const LIGHT_SQUARE_STYLE = { backgroundColor: "#3a5a85" };
 
 function loadSavedFen() {
   try {

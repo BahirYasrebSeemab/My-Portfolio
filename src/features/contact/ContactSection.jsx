@@ -84,7 +84,7 @@ const ContactSection = () => {
           {expandedGroups.includes("find-me-also-in") && (
             <div className="contact-folder-content">
               <a
-                href="https://github.com/bahir22447"
+                href="https://github.com/BahirYasrebSeemab"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contact-link"

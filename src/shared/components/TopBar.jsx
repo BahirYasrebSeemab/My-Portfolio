@@ -6,7 +6,7 @@ const TopBar = ({ activeSection, setActiveSection }) => {
     <div className="top-bar">
       <div className="top-bar-left">
         <div className="top-bar-logo">bahir-yasreb</div>
-        {["hello", "about-me", "projects", "hobbies", "terminal"].map((tab) => (
+        {["hello", "about-me", "projects", "terminal"].map((tab) => (
           <div
             key={tab}
             className={`top-bar-tab ${activeSection === tab ? "active" : ""}`}
